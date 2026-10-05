@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#1e2a24"/>
+  <ellipse cx="800" cy="480" rx="160" ry="140" fill="#7eb8a2"/>
+  <rect x="740" y="240" width="120" height="80" fill="#7eb8a2"/>
+  <text x="800" y="760" text-anchor="middle" fill="#f4f4f5" font-family="system-ui,sans-serif" font-size="48">KET-011</text>
+</svg>

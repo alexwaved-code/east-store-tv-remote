@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS rooms (
+  code TEXT PRIMARY KEY,
+  updated_at INTEGER NOT NULL,
+  lang TEXT NOT NULL DEFAULT 'zh',
+  mode TEXT NOT NULL DEFAULT 'loop',
+  queue TEXT NOT NULL DEFAULT '[]',
+  idx INTEGER NOT NULL DEFAULT 0,
+  playing INTEGER NOT NULL DEFAULT 0,
+  current_id TEXT,
+  paired INTEGER NOT NULL DEFAULT 0,
+  tv_ready INTEGER NOT NULL DEFAULT 0,
+  revision INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS idx_rooms_updated ON rooms(updated_at DESC);

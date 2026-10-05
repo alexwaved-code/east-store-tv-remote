@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>East Store TV</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/shared/styles.css?v=20260928b" />
+    <script src="/vendor/qrcode.min.js"></script>
+    <script src="/shared/stamp.js?v=20260928k"></script>
+  </head>
+  <body class="tv is-pairing">
+    <div class="tv__stage">
+      <aside class="tv__rail tv__rail--left" id="railLeft">
+        <p class="tv__rail-brand" id="railBrand"></p>
+        <h2 class="tv__rail-name" id="railName"></h2>
+        <p class="tv__rail-price" id="railPriceLeft"></p>
+        <p class="tv__rail-info" id="railInfoLeft"></p>
+      </aside>
+      <div class="tv__frame" id="frame">
+        <video id="player" playsinline webkit-playsinline preload="auto" muted crossorigin="anonymous"></video>
+        <canvas id="hold" class="tv__hold" hidden></canvas>
+      </div>
+      <aside class="tv__rail tv__rail--right" id="railRight">
+        <p class="tv__rail-brand" id="railBrandRight"></p>
+        <h2 class="tv__rail-name" id="railNameRight"></h2>
+        <p class="tv__rail-price" id="railPrice"></p>
+        <p class="tv__rail-info" id="railInfo"></p>
+      </aside>
+      <div class="tv__veil" id="veil" aria-hidden="true"></div>
+      <div class="tv__loading" id="loading" hidden>
+        <span class="tv__loading-ring" aria-hidden="true"></span>
+        <p class="tv__loading-label">載入中</p>
+      </div>
+      <div class="tv__shield" id="shield" aria-hidden="true"></div>
+    </div>
+
+    <div class="tv__status" id="status">連線中…</div>
+    <div class="tv__reconnect" id="reconnectChip" hidden>
+      <span>斷線</span>
+      <strong id="reconnectCode">····</strong>
+    </div>
+    <div class="tv__live-qr" id="liveQr" hidden>
+      <div class="tv__qr tv__qr--float" id="qrLive"></div>
+      <p class="tv__live-qr-code" id="liveQrCode"></p>
+    </div>
+
+    <div class="tv__overlay" id="overlay">
+      <div class="tv__start-screen" id="pairHub">
+        <header class="tv__start-brand">
+          <p class="tv__start-mark">EAST STORE</p>
+          <h1 class="tv__start-logo">TV</h1>
+          <p class="tv__start-shop" id="shopName" hidden></p>
+          <p class="tv__start-tag" id="pairHint">店內廣告播放 · 掃碼後按遙控一次</p>
+        </header>
+
+        <div class="tv__start-body" id="pairBody">
+          <section class="tv__start-qr" aria-labelledby="qrLabel">
+            <p class="tv__start-label" id="qrLabel">掃碼進房</p>
+            <div class="tv__qr" id="qrBig"><div class="tv__qr-skel" aria-hidden="true"></div></div>
+            <p class="tv__code" id="roomCode">····</p>
+          </section>
+
+          <section class="tv__start-join" aria-labelledby="joinLabel">
+            <p class="tv__start-label" id="joinLabel">輸入房號</p>
+            <form class="tv__start-form" id="joinForm">
+              <label class="visually-hidden" for="codeInput">房號</label>
+              <input
+                id="codeInput"
+                name="code"
+                maxlength="8"
+                placeholder="臨時房號"
+                autocomplete="off"
+                inputmode="text"
+                autocapitalize="characters"
+              />
+              <button class="btn btn--primary" type="submit">進入房間</button>
+            </form>
+            <p class="tv__start-note" id="enterHint">掃電視 QR，或輸入房號</p>
+          </section>
+        </div>
+
+        <div class="tv__start-cta" id="pairCta">
+          <p class="tv__start-foot" id="remoteHint">掃碼後按遙控一次，畫面與聲音一起播放</p>
+        </div>
+      </div>
+
+      <div class="tv__ready" id="pairReady" hidden>
+        <div class="tv__remote" aria-hidden="true">
+          <div class="tv__remote-body">
+            <span class="tv__remote-led"></span>
+            <span class="tv__remote-ok"><span>OK</span></span>
+            <span class="tv__remote-keys"></span>
+            <span class="tv__remote-ripple"></span>
+          </div>
+        </div>
+        <p class="tv__ready-kicker">手機已入房</p>
+        <h1 class="tv__ready-title">按遙控一次</h1>
+        <p class="tv__ready-hint" id="readyHint">畫面與聲音一起播放</p>
+        <p class="tv__ready-phones" id="readyPhones">手機已入房</p>
+      </div>
+    </div>
+
+    <script type="module" src="/tv.js?v=20260928k"></script>
+  </body>
+</html>

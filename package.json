@@ -1,0 +1,14 @@
+{
+  "name": "east-store-tv-remote",
+  "private": false,
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "In-store TV ads with a phone QR remote. Demo catalog only — not for production deploy.",
+  "scripts": {
+    "dev": "wrangler pages dev public --compatibility-date=2026-06-01 --persist-to=.wrangler/state",
+    "seed:local": "wrangler d1 execute east-store-tv-rooms --local --file=schema.sql --persist-to=.wrangler/state"
+  },
+  "devDependencies": {
+    "wrangler": "^4.147.0"
+  }
+}

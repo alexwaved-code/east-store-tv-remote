@@ -1,0 +1,12 @@
+{
+  "name": "east-store-tv-remote",
+  "compatibility_date": "2026-06-01",
+  "pages_build_output_dir": "public",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "east-store-tv-rooms",
+      "database_id": "00000000-0000-0000-0000-000000000002"
+    }
+  ]
+}

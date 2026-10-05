@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#243018"/>
+  <rect x="560" y="280" width="480" height="280" rx="16" fill="#8fbc5a"/>
+  <text x="800" y="760" text-anchor="middle" fill="#f4f4f5" font-family="system-ui,sans-serif" font-size="48">BAG-007</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#3a2218"/>
+  <rect x="520" y="360" width="560" height="80" rx="20" fill="#d4a574"/>
+  <text x="800" y="760" text-anchor="middle" fill="#f4f4f5" font-family="system-ui,sans-serif" font-size="48">IRON-004</text>
+</svg>
